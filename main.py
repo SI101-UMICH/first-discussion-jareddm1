@@ -9,7 +9,7 @@ def get_movie(title):
     )
     response = requests.get(url)
     data = response.json()
-
+    
     # Common TMDB error responses
     if "success" in data and data["success"] is False:
         raise ValueError(
